@@ -1,0 +1,81 @@
+display
+
+# -----------------------------
+# BASIC GRID OPERATIONS
+# -----------------------------
+search Central
+search Airport
+search MainHub
+
+rename 0 0 MainHub
+search MainHub
+
+display
+
+# -----------------------------
+# ROUTE CREATION & OPERATIONS
+# -----------------------------
+create_route R1
+add_station R1 0 0
+add_station R1 0 1
+add_station R1 1 1
+add_station R1 2 2
+
+display_route R1
+
+distance R1
+cost R1
+detect_loop R1
+
+# -----------------------------
+# SECOND ROUTE
+# -----------------------------
+create_route R2
+add_station R2 0 0
+add_station R2 1 0
+add_station R2 1 1
+add_station R2 1 2
+
+display_route R2
+distance R2
+cost R2
+
+# -----------------------------
+# LOOP TEST (MANUAL LOOP)
+# -----------------------------
+create_route R3
+add_station R3 0 0
+add_station R3 0 1
+add_station R3 0 0
+
+display_route R3
+detect_loop R3
+
+# -----------------------------
+# EDGE CASES
+# -----------------------------
+add_station R1 (10,10)     # invalid coordinates
+add_station R9 (0,0)       # route does not exist
+
+# -----------------------------
+# SHORTEST PATH TESTS
+# -----------------------------
+shortest 0 0 2 2
+shortest 0 1 2 2
+shortest 1 1 2 2
+
+# -----------------------------
+# COMPLEX PATH TEST
+# -----------------------------
+shortest 0 0 4 4
+
+# -----------------------------
+# MULTIPLE CALLS (STABILITY)
+# -----------------------------
+shortest 2 2 0 0
+shortest 0 0 1 1
+shortest 1 0 2 2
+
+# -----------------------------
+# FINAL DISPLAY
+# -----------------------------

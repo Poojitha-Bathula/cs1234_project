@@ -1,0 +1,9 @@
+Route R1:
+(0,0:MainHub) -> (0,1:Egmore) -> (1,1:Kilpauk) -> (2,2:AshokNagar) -> (0,0:MainHub)
+
+Route R2:
+(0,0:MainHub) -> (1,0:AnnaNagar) -> (1,1:Kilpauk) -> (1,2:Tnagar)
+
+Route R3:
+(0,0:MainHub) -> (0,1:Egmore) -> (0,0:MainHub)
+
