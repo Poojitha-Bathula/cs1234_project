@@ -91,9 +91,7 @@ shortest 0 0 2 2
 
 📤 Output Features
 ✔ Station Display
-==============================
- AVAILABLE STATIONS
-==============================
+------available station-------
 Central
 Egmore
 ...
